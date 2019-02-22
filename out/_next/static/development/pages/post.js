@@ -10003,7 +10003,7 @@ var Page = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(functi
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fpost&absolutePagePath=%2FUsers%2Ffranco%2FDocuments%2Fworkspace%2Fnextjs-playground%2Fpages%2Fpost.js ***!
   \****************************************************************************************************************************************************/
@@ -10026,5 +10026,5 @@ module.exports = dll_39016f65f045daf888e4;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]));;
+},[[1,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=post.js.map
