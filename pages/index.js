@@ -13,7 +13,7 @@ const PostLink = (props) => (
 export default () => {
     const cowRoutes = routes.getRoutes()
     const cowLinks = Object.keys(cowRoutes).map((slug) => {
-      if (slug) {
+      if (slug && slug !== '/') {
         const title = idx(cowRoutes[slug], _ => _.query.title)
         return <PostLink title={title} key={slug} />
       }

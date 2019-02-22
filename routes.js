@@ -4,7 +4,9 @@ const _routeCount = 1000
 module.exports = {
     routeCount: _routeCount,
     getRoutes: function() {
-        let routes = {}
+        let routes = {
+            '/': { page: '/', query: { title: "Home" } }
+        }
 
         // Subtract 1 to include the root page '/'
         for (let i = 0; i < _routeCount; i++) {

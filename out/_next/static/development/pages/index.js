@@ -104563,7 +104563,7 @@ var PostLink = function PostLink(props) {
   var cowRoutes = _routes__WEBPACK_IMPORTED_MODULE_4___default.a.getRoutes();
 
   var cowLinks = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(cowRoutes).map(function (slug) {
-    if (slug) {
+    if (slug && slug !== '/') {
       var title = idx__WEBPACK_IMPORTED_MODULE_3___default()(cowRoutes[slug], function (_) {
         return _.query.title;
       });
@@ -104621,7 +104621,15 @@ var _routeCount = 1000;
 module.exports = {
   routeCount: _routeCount,
   getRoutes: function getRoutes() {
-    var routes = {}; // Subtract 1 to include the root page '/'
+    var routes = {
+      '/': {
+        page: '/',
+        query: {
+          title: "Home"
+        }
+      } // Subtract 1 to include the root page '/'
+
+    };
 
     for (var i = 0; i < _routeCount; i++) {
       routes["/p/".concat(lorem.slug())] = {
