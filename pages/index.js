@@ -11,14 +11,14 @@ const PostLink = (props) => (
 )
 
 export default () => {
-    const cowRoutes = routes.getRoutes()
-    const cowLinks = Object.keys(cowRoutes).map((slug) => {
+    const cowRoutes = process.env.routes
+    const cowLinks = cowRoutes ? Object.keys(cowRoutes).map((slug) => {
       if (slug && slug !== '/') {
         const title = idx(cowRoutes[slug], _ => _.query.title)
         return <PostLink title={title} key={slug} />
       }
       return null
-    })
+    }) : null
     
     return (
     <div>
