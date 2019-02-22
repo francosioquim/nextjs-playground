@@ -22,7 +22,7 @@ export default () => {
     
     return (
     <div>
-        <h1>{`There are ${routes.routeCount} cows below`}</h1>
+        <h1>{`Generated ${routes.routeCount} cow messages`}</h1>
         <ul>
             {cowLinks}
         </ul>
