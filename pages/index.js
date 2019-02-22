@@ -12,13 +12,18 @@ const PostLink = (props) => (
 
 export default () => {
     const cowRoutes = process.env.routes
-    const cowLinks = cowRoutes ? Object.keys(cowRoutes).map((slug) => {
-      if (slug && slug !== '/') {
+    const cowLinks = cowRoutes ?
+    Object.keys(cowRoutes)
+      // clean up array before mapping
+      .filter((slug) => slug && slug !==  '/' && idx(cowRoutes[slug], _ => _.query.title))
+      // sort by titles
+      .sort((slugA, slugB) => idx(cowRoutes[slugA], _ => _.query.title) < idx(cowRoutes[slugB], _ => _.query.title) ? -1 : 1)
+      // create <PostLink /> components for each slug
+      .map((slug) => {
         const title = idx(cowRoutes[slug], _ => _.query.title)
         return <PostLink title={title} key={slug} />
-      }
-      return null
-    }) : null
+      }) : 
+    null
     
     return (
     <div>
