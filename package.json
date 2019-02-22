@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "idx": "^2.5.4",
     "next": "^8.0.2",
     "react": "^16.8.3",
+    "react-cowsay": "^0.1.0",
     "react-dom": "^16.8.3"
   },
   "scripts": {
@@ -13,7 +15,9 @@
   "version": "1.0.0",
   "description": "An app that dynamically generates pages with talking cows (yes \"cows\") using NextJS",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "faker": "^4.1.0"
+  },
   "author": "",
   "license": "ISC"
 }
